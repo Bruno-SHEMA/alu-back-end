@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user_data = user.json()
     EMPLOYEE_NAME = user_data.get("name")
     tasks = requests.get(
-        f'https://jsonplaceholder.typicode.com/todos?userId={employee_id}'
+        f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
     )
     tasks = tasks.json()
     TOTAL_NUMBER_OF_TASKS = len(tasks)
