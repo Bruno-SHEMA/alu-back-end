@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Getting data from API"""
+"""
+Getting data from API
+Fetches employee name, completed tasks and total tasks
+"""
 import requests
 import sys
 employee_id = sys.argv[1]
