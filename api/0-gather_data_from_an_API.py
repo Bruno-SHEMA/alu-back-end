@@ -11,7 +11,7 @@ if __name__ == "__main__":
         f'https://jsonplaceholder.typicode.com/users/{employee_id}'
         )
     user_data = user.json()
-    EMPLOYEE_NAME = user_data.get("name")
+    NAME = user_data.get("name")
     tasks = requests.get(
         f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
     )
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     completed_tasks = [task for task in tasks if task.get("completed")]
     DONE_TASKS = len(completed_tasks)
     print(
-        f"Employee {EMPLOYEE_NAME} is done with tasks({DONE_TASKS}/{NUMBER_OF_TASKS}):"
+        f"Employee {NAME} is done with tasks({DONE_TASKS}/{NUMBER_OF_TASKS}):"
         )
     for task_titles in completed_tasks:
         task_title = task_titles.get("title")
