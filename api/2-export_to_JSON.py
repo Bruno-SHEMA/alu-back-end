@@ -19,12 +19,12 @@ if __name__ == "__main__":
         title = task.get("title")
         TASK_COMPLETED_STATUS = task.get("completed")
         tasks_list.append({
-            "task":title,
-            "completed":TASK_COMPLETED_STATUS,
-            "username":user
+            "task": title,
+            "completed": TASK_COMPLETED_STATUS,
+            "username": user
         })
     employee = {
-        f"{employee_id}":tasks_list
+        f"{employee_id}": tasks_list
     }
     print(employee)
     with open(f"{employee_id}.json", "w") as file:
