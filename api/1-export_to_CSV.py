@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Module to retrieve data from the API,
+and then export the data into a CSV file"""
 import csv
 import requests
 import sys
