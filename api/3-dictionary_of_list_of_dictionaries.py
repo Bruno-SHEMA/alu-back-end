@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import json
-import requests
-import sys
 """
 Retrieve data, and export into a .json file
  in format of list of dictionaries
 """
+import json
+import requests
+import sys
 if __name__ == "__main__":
     users = requests.get(
         f"https://jsonplaceholder.typicode.com/users"
