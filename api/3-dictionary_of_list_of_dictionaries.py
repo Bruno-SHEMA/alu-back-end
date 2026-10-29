@@ -11,6 +11,7 @@ if __name__ == "__main__":
         f"https://jsonplaceholder.typicode.com/users"
     )
     users = users.json()
+    tasks_lists = {}
     for user in users:
         user_id = user.get("id")
         user_data = requests.get(
@@ -29,6 +30,6 @@ if __name__ == "__main__":
                 "task": task.get("title"),
                 "completed": task.get("completed")
             })
-        tasks_lists = {f"{user_id}": user_tasks}
-        with open("todo_all_employees.json", "w") as file:
-            json.dump(tasks_lists, file)
+        tasks_lists[str(user_id)] = user_tasks
+    with open("todo_all_employees.json", "w") as file:
+        json.dump(tasks_lists, file)
