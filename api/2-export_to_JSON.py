@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Module to retrieve data from the API,
-and then export the data into a .json file
-"""
+"""retrieve data from the API,and then export the data into a .json file"""
 import json
 import requests
 import sys
