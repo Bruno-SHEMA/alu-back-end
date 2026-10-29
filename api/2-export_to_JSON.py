@@ -17,7 +17,7 @@ if __name__ == "__main__":
     tasks_list = []
     for task in tasks:
         title = task.get("title")
-        TASK_COMPLETED_STATUS = task.get("completed")        
+        TASK_COMPLETED_STATUS = task.get("completed")
         tasks_list.append({
             "task":title,
             "completed":TASK_COMPLETED_STATUS,
