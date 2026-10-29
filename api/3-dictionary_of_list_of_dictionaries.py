@@ -15,7 +15,7 @@ if __name__ == "__main__":
     for user in users:
         user_id = user.get("id")
         user_data = requests.get(
-        f"https://jsonplaceholder.typicode.com/users/{user_id}"
+            f"https://jsonplaceholder.typicode.com/users/{user_id}"
         )
         user_data = user_data.json()
         username = user_data.get("username")
